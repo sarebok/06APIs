@@ -15,15 +15,7 @@ const convert = (monedaOriginal, convertirACurrency) => {
   return conversion;
 };
 
-const getMiIndicador = async () => {
-  const resp = await fetch("https://mindicador.cl/api/");
-  const json = await resp.json();
-  dolarObject = json.dolar;
-  euroObject = json.euro;
-};
-
-const init = async () => {
-  await getMiIndicador();
+const convertOnClick = () => {
   convertBtn.addEventListener("click", () => {
     getPesos = pesosInput.value;
     getDolar = dolarObject.valor;
@@ -38,6 +30,24 @@ const init = async () => {
   });
 };
 
-init();
+const getMiIndicador = async () => {
+  const resp = await fetch("https://mindicador.cl/api/");
+  const json = await resp.json();
+  dolarObject = json.dolar;
+  euroObject = json.euro;
+};
 
-//aqui viene el codigo funcional
+const getHistoricCurrency = async (currency) => {
+  const resp = await fetch(`https://mindicador.cl/api/${currency}`);
+  const json = await resp.json();
+  currencyObject = json;
+  console.log(currencyObject);
+};
+
+const init = async () => {
+  await getMiIndicador();
+  await getHistoricCurrency("dolar");
+  convertOnClick();
+};
+
+init();
