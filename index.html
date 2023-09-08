@@ -7,6 +7,28 @@
     <title>Document</title>
   </head>
   <body>
+    <main>
+      <section class="conversor-section">
+        <h1>Conversor de monedas nacional</h1>
+        <div class="conversor-container">
+          <div>
+            <h2>Pesos CLP</h2>
+            <label for="input-clp"></label>
+            <input id="input-clp" type="number" />
+          </div>
+          <div>
+            <h2>Moneda a convertir</h2>
+            <select id="select-currency">
+              <option value="USD">Dolar Americano</option>
+              <option value="EUR">Euro</option>
+            </select>
+          </div>
+          <button id="convert-currency-btn">Buscar</button>
+          <h2>Resultado: <span id="conversion"></span></h2>
+        </div>
+      </section>
+      <section class="graph-section"></section>
+    </main>
     <script src="./assets/js/script.js"></script>
   </body>
 </html>
