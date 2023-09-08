@@ -1,0 +1,26 @@
+.conversor-container {
+  border: 1px solid black;
+  text-align: center;
+}
+
+.clp-input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clp-input-container input {
+  height: 1rem;
+  margin-left: 1rem;
+}
+
+.currency-picker-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clp-input-container select {
+  height: 1rem;
+  margin-left: 1rem;
+}
