@@ -41,7 +41,6 @@ const getHistoricCurrency = async (currency) => {
   const resp = await fetch(`https://mindicador.cl/api/${currency}`);
   const json = await resp.json();
   currencyObject = json;
-  console.log("moneda es: " + currency);
 };
 
 //comienza el grafico
@@ -72,7 +71,7 @@ const lineChart = (series, categories) => {
     },
     grid: {
       row: {
-        colors: ["#f3f3f3", "transparent"], // takes an array which will be repeated on columns
+        colors: ["#AFA8BA", "#AFA8BA"], // takes an array which will be repeated on columns
         opacity: 0.5,
       },
     },
@@ -94,7 +93,7 @@ const init = async (tipoCambio) => {
   let fechaCurrency = [];
   let valorCurrency = [];
   for (let i = 0; i < 10; i++) {
-    fechaCurrency.push(currencyObject.serie[i].fecha);
+    fechaCurrency.push(currencyObject.serie[i].fecha.slice(0, 10));
     valorCurrency.push(currencyObject.serie[i].valor);
   }
   console.log(fechaCurrency);
