@@ -19,16 +19,19 @@
           <div class="currency-picker-container">
             <h2>Moneda a convertir</h2>
             <select id="select-currency">
-              <option value="USD">Dolar Americano</option>
-              <option value="EUR">Euro</option>
+              <option value="dolar">Dolar Americano</option>
+              <option value="euro">Euro</option>
             </select>
           </div>
           <button id="convert-currency-btn">Buscar</button>
           <h2>Resultado: <span id="conversion"></span></h2>
         </div>
       </section>
-      <section class="graph-section"></section>
+      <section class="graph-section">
+        <div id="chart"></div>
+      </section>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script src="./assets/js/script.js"></script>
   </body>
 </html>
