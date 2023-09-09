@@ -1,13 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&family=Roboto:wght@500&display=swap");
+
+h1,
+h2 {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1rem;
+}
+
+.conversor-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .conversor-container {
   border: 1px solid black;
   text-align: center;
   box-shadow: 0 0 10px grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin: auto;
+  padding: 1rem 0;
 }
 
 .clp-input-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 1rem;
 }
 
 .clp-input-container input {
@@ -15,9 +39,15 @@
   margin-left: 1rem;
 }
 
+#convert-currency-btn {
+  width: 4rem;
+  margin: 0 auto;
+}
+
 .currency-picker-container {
   display: flex;
   justify-content: center;
+  margin-left: 1rem;
   align-items: center;
 }
 
@@ -26,6 +56,9 @@
   margin-left: 1rem;
 }
 
+.graph-section {
+  margin: auto;
+}
 #chart {
   box-shadow: 0 0 10px;
   margin-top: 2rem;

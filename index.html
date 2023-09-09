@@ -12,20 +12,21 @@
         <h1>Conversor de monedas nacional</h1>
         <div class="conversor-container">
           <div class="clp-input-container">
-            <h2>Pesos CLP</h2>
+            <h2>Pesos a convertir (c):</h2>
             <label for="input-clp"></label>
             <input id="input-clp" type="number" />
           </div>
           <div class="currency-picker-container">
-            <h2>Moneda a convertir</h2>
+            <h2>Convertir de pesos a:</h2>
             <select id="select-currency">
-              <option value="dolar">Dolar Americano</option>
-              <option value="euro">Euro</option>
+              <option value="dolar">Dolares</option>
+              <option value="euro">Euros</option>
             </select>
           </div>
-          <button id="convert-currency-btn">Buscar</button>
-          <h2>Resultado: <span id="conversion"></span></h2>
+          <button id="convert-currency-btn">Convertir</button>
         </div>
+
+        <h2>Resultado: <span id="conversion"></span></h2>
       </section>
       <section class="graph-section">
         <div id="chart"></div>

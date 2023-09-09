@@ -22,9 +22,9 @@ const indicatorOnClick = () => {
   getDolar = dolarObject.valor;
   getEuro = euroObject.valor;
   if (selectCurrency.value == "dolar") {
-    conversion.innerHTML = convert(getPesos, getDolar).toFixed(2);
+    conversion.innerHTML = `${getPesos} pesos son ${convert(getPesos, getDolar).toFixed(2)} dolares`;
   } else if (selectCurrency.value == "euro") {
-    conversion.innerHTML = convert(getPesos, getEuro).toFixed(2);
+    conversion.innerHTML = `${getPesos} pesos son ${convert(getPesos, getEuro).toFixed(2)} euros`;
   }
 
   //conversion.innerHTML = convert(getPesos, getDolar);
