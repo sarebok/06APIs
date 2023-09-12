@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&family=Roboto:wght@500&display=swap");
 
 body {
-  background-color: #12022c;
+  background-color: #ede8d6;
 }
 
 h1,
@@ -13,6 +13,7 @@ h2 {
 
 h2 {
   font-size: 1rem;
+  color: #ede8d6;
 }
 
 .conversor-section {
@@ -20,8 +21,13 @@ h2 {
   flex-direction: column;
   justify-content: center;
 }
+
+.conversor-section h1 {
+  color: #4b474b;
+}
 .conversor-container {
   border: 1px solid black;
+  background-color: #12022c;
   text-align: center;
   box-shadow: 0 0 10px grey;
   display: flex;
@@ -30,7 +36,7 @@ h2 {
   min-width: 300px;
   width: 100%;
   margin: auto;
-  padding: 1rem 0;
+  padding: 1rem;
 }
 
 .clp-input-container {

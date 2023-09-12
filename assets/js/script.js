@@ -31,16 +31,24 @@ const indicatorOnClick = () => {
 };
 
 const getMiIndicador = async () => {
-  const resp = await fetch("https://mindicador.cl/api/");
-  const json = await resp.json();
-  dolarObject = json.dolar;
-  euroObject = json.euro;
+  try {
+    const resp = await fetch("https://mindicador.cl/api/");
+    const json = await resp.json();
+    dolarObject = json.dolar;
+    euroObject = json.euro;
+  } catch (e) {
+    console.log(e);
+  }
 };
 
 const getHistoricCurrency = async (currency) => {
-  const resp = await fetch(`https://mindicador.cl/api/${currency}`);
-  const json = await resp.json();
-  currencyObject = json;
+  try {
+    const resp = await fetch(`https://mindicador.cl/api/${currency}`);
+    const json = await resp.json();
+    currencyObject = json;
+  } catch (e) {
+    console.log(e);
+  }
 };
 
 //comienza el grafico
@@ -49,7 +57,7 @@ const lineChart = (series, categories) => {
     series: [
       {
         name: "Desktops",
-        data: series,
+        data: series.reverse(),
       },
     ],
     chart: {
@@ -76,7 +84,7 @@ const lineChart = (series, categories) => {
       },
     },
     xaxis: {
-      categories: categories,
+      categories: categories.reverse(),
     },
   };
   chartExt.innerHTML = "";
@@ -99,9 +107,6 @@ const init = async (tipoCambio) => {
   console.log(fechaCurrency);
   console.log(valorCurrency);
   lineChart(valorCurrency, fechaCurrency);
-  //for (object of currencyObject.serie) console.log(object.fecha);
-
-  //  lineChart(valorCurrency, fechaCurrency);
 };
 
 let currencySelected = "";
