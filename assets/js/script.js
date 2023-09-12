@@ -52,7 +52,7 @@ const getHistoricCurrency = async (currency) => {
 };
 
 //comienza el grafico
-const lineChart = (series, categories) => {
+const lineChart = (series, categories, currency) => {
   const options = {
     series: [
       {
@@ -74,7 +74,7 @@ const lineChart = (series, categories) => {
       curve: "straight",
     },
     title: {
-      text: "Product Trends by Month",
+      text: `${currency} de los últimos 10 días`,
       align: "left",
     },
     grid: {
@@ -106,7 +106,7 @@ const init = async (tipoCambio) => {
   }
   console.log(fechaCurrency);
   console.log(valorCurrency);
-  lineChart(valorCurrency, fechaCurrency);
+  lineChart(valorCurrency, fechaCurrency, tipoCambio);
 };
 
 let currencySelected = "";
